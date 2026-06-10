@@ -1,4 +1,1 @@
-{
-  "throttle": 1,
-  "steering": 1
-}
+enable,go_forwards,delay,500,turn_right,delay,500,brakes_on,delay,5000,go_backwards,delay,500,turn_straight,delay,500,brakes_on,delay,5000,go_forwards,delay,500,turn_left,delay,500,brakes_on,delay,5000,go_backwards,delay,500,turn_straight,delay,500,brakes_on,delay,3000,go_forwards,delay,300,stop,disable

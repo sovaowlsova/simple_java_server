@@ -6,16 +6,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Objects;
 
 @SpringBootApplication
 @RestController
@@ -69,7 +65,7 @@ public class FoxyServerApplication {
         }
     }
 
-	@PostMapping("/remove-controls")
+	@DeleteMapping("/remove-controls")
 	public ResponseEntity<String> removeControls(@RequestParam(value = "password", defaultValue = "0") String password) {
 		if (!password.equals(validPassword)) {
 			return ResponseEntity.status(HttpStatus.FORBIDDEN).body("Access denied");
